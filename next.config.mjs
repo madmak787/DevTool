@@ -1,16 +1,42 @@
+// Same convention as the other tools on tool.khanamir.me: the base path comes from
+// NEXT_PUBLIC_BASE_PATH, or from the path of NEXT_PUBLIC_APP_URL (set by CI to
+// https://tool.khanamir.me/devtools). Locally neither is set, so the app runs at "/".
+function resolveBasePath() {
+  if (process.env.NEXT_PUBLIC_BASE_PATH) {
+    return process.env.NEXT_PUBLIC_BASE_PATH.replace(/\/$/, "")
+  }
+
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL
+  if (!appUrl) return ""
+
+  try {
+    const { pathname } = new URL(appUrl)
+    if (!pathname || pathname === "/") return ""
+    return pathname.replace(/\/$/, "")
+  } catch {
+    return ""
+  }
+}
+
+export const basePath = resolveBasePath()
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  eslint: {
-    ignoreDuringBuilds: true,
+  ...(basePath ? { basePath } : {}),
+  // Emit folder/index.html files so URLs work on any static host (e.g. Hostinger)
+  trailingSlash: true,
+  reactStrictMode: true,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
+  devIndicators: false,
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   images: {
     unoptimized: true,
   },
-  trailingSlash: true,
 }
 
 export default nextConfig

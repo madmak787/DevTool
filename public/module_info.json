@@ -1,0 +1,9 @@
+{
+  "title": "DevTools",
+  "short_desc": "45 free developer tools in one place: JSON formatter, diff checker, regex tester, Base64, hashes, JWT decoder, SQL formatter, QR codes, cron parser, color converter and more. Everything runs in your browser.",
+  "doclink": "#",
+  "status": "live",
+  "type": "module",
+  "slug": "devtools",
+  "tags": "free developer tools json formatter diff checker regex tester base64 hash jwt decoder sql formatter qr code uuid password generator cron color converter"
+}

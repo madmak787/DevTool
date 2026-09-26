@@ -123,9 +123,9 @@ function SidebarNav({ onNavigate }: { onNavigate?: () => void }) {
       </nav>
 
       <div className="border-t px-5 py-3 text-xs text-muted-foreground">
-        Runs in your browser. By{" "}
+        Runs in your browser. Coded By &copy;
         <a href="https://khanamir.me" target="_blank" rel="noopener" className="font-medium text-foreground/80 hover:text-primary">
-          Mohd Amir Khan
+          madmak787
         </a>
         <span className="mx-1.5">·</span>
         <a href="https://tool.khanamir.me" className="font-medium text-foreground/80 hover:text-primary">

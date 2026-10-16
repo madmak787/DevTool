@@ -4,6 +4,8 @@
 
 Live: **https://tool.khanamir.me/devtools**
 
+![DevTools home page listing 45 browser-based developer tools](docs/screenshot.webp)
+
 ## Tools
 
 Categories and the tools inside them are ordered by popularity (`POPULARITY` in `lib/tools.ts`); the home page also shows the top 8.

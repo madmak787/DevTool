@@ -145,7 +145,7 @@ export default function ColorPicker() {
                   title={`${s.name}: ${hex}`}
                   className="group flex flex-col items-center gap-1 outline-none"
                 >
-                  <span className="h-12 w-full rounded-md border shadow-xs transition-transform group-hover:scale-105 group-focus-visible:ring-2 group-focus-visible:ring-ring" style={{ background: hex }} />
+                  <span className="h-12 w-full rounded-md border shadow-xs transition-[border-color] group-hover:border-foreground/30 group-focus-visible:ring-2 group-focus-visible:ring-ring" style={{ background: hex }} />
                   <span className="text-[10px] text-muted-foreground">{s.name}</span>
                 </button>
               )

@@ -97,7 +97,7 @@ export function HomeView() {
         <>
           {recentTools.length > 0 && (
             <section className="mt-8">
-              <h2 className="mb-3 text-[11px] font-semibold tracking-wider text-muted-foreground uppercase">Recently used</h2>
+              <h2 className="mb-3 text-xs font-medium text-muted-foreground">Recently used</h2>
               <div className="flex flex-wrap gap-2">
                 {recentTools.map((t) => {
                   const Icon = t.icon
@@ -116,14 +116,14 @@ export function HomeView() {
             </section>
           )}
           <section className="mt-8" aria-labelledby="cat-popular">
-            <h2 id="cat-popular" className="mb-3 text-[11px] font-semibold tracking-wider text-muted-foreground uppercase">
+            <h2 id="cat-popular" className="mb-3 text-xs font-medium text-muted-foreground">
               Most popular
             </h2>
             {grid(POPULAR_TOOLS)}
           </section>
           {CATEGORIES.map((c) => (
             <section key={c.id} className="mt-10" aria-labelledby={`cat-${c.id}`}>
-              <h2 id={`cat-${c.id}`} className="mb-3 text-[11px] font-semibold tracking-wider text-muted-foreground uppercase">
+              <h2 id={`cat-${c.id}`} className="mb-3 text-xs font-medium text-muted-foreground">
                 {c.name}
               </h2>
               {grid(TOOLS.filter((t) => t.category === c.id))}

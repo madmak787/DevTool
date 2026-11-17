@@ -50,13 +50,13 @@ import {
 export type CategoryId = "text" | "code" | "encode" | "security" | "web" | "design" | "calc"
 
 const CATEGORY_LIST: { id: CategoryId; name: string }[] = [
-  { id: "code", name: "Code & Data" },
+  { id: "code", name: "Code & data" },
   { id: "text", name: "Text" },
   { id: "encode", name: "Encoding" },
   { id: "security", name: "Security" },
   { id: "web", name: "Web & DevOps" },
-  { id: "design", name: "Images & Design" },
-  { id: "calc", name: "Time & Math" },
+  { id: "design", name: "Images & design" },
+  { id: "calc", name: "Time & math" },
 ]
 
 export type Tool = {

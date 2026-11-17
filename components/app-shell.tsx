@@ -93,7 +93,7 @@ function SidebarNav({ onNavigate }: { onNavigate?: () => void }) {
 
         {!filtering && favoriteTools.length > 0 && (
           <div className="mt-4">
-            <h3 className="mb-1 flex items-center gap-1.5 px-2 text-[11px] font-semibold tracking-wider text-muted-foreground uppercase">
+            <h3 className="mb-1 flex items-center gap-1.5 px-2 text-xs font-medium text-muted-foreground">
               <Star className="size-3 fill-current" /> Favorites
             </h3>
             {favoriteTools.map((t) => (
@@ -107,7 +107,7 @@ function SidebarNav({ onNavigate }: { onNavigate?: () => void }) {
           if (tools.length === 0) return null
           return (
             <div key={c.id} className="mt-4">
-              <h3 className="mb-1 px-2 text-[11px] font-semibold tracking-wider text-muted-foreground uppercase">
+              <h3 className="mb-1 px-2 text-xs font-medium text-muted-foreground">
                 {c.name}
               </h3>
               {tools.map((t) => (
@@ -161,7 +161,7 @@ function Header({ onMenu }: { onMenu: () => void }) {
   const tool = TOOLS_BY_SLUG[slug]
 
   return (
-    <header className="sticky top-0 z-30 flex h-14 items-center gap-2 border-b bg-background/85 px-4 backdrop-blur-md supports-[backdrop-filter]:bg-background/70 sm:px-6">
+    <header className="sticky top-0 z-30 flex h-14 items-center gap-2 border-b bg-background px-4 sm:px-6">
       <Button variant="ghost" size="icon-sm" className="-ml-1.5 lg:hidden" onClick={onMenu} aria-label="Open menu">
         <Menu />
       </Button>

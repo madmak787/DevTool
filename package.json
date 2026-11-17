@@ -50,6 +50,7 @@
     "dompurify": "^3.4.16",
     "embla-carousel-react": "8.5.1",
     "fflate": "^0.8.3",
+    "geist": "^1.9.2",
     "input-otp": "1.4.1",
     "js-beautify": "^2.0.3",
     "lucide-react": "^0.454.0",
